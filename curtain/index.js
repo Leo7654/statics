@@ -1,10 +1,10 @@
 console.log("hello");
-
+let secs = 2 * 60 * 1000;
 let back = $('<button>');
-back.text("back")
+back.text("open")
 back.on('click', () => {
   console.log("back");
-  $.get('/b');
+  $.get('/b/'+secs);
 })
 $(document.body).append(back)
 
@@ -17,9 +17,9 @@ stop.on('click', () => {
 $(document.body).append(stop)
 
 let forward = $('<button>');
-forward.text("forward")
+forward.text("close")
 forward.on('click', () => {
   console.log("forward");
-  $.get('/f');
+  $.get('/f/'+secs);
 })
 $(document.body).append(forward)
