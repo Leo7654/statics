@@ -9,7 +9,7 @@ back.on('click', () => {
 $(document.body).append(back)
 
 let stop = $('<button>');
-stop.text("back")
+stop.text("stop")
 stop.on('click', () => {
   console.log("stop");
   $.get('/s');
@@ -17,7 +17,7 @@ stop.on('click', () => {
 $(document.body).append(stop)
 
 let forward = $('<button>');
-forward.text("back")
+forward.text("forward")
 forward.on('click', () => {
   console.log("forward");
   $.get('/f');
